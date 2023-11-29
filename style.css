@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+  background-color: #143b8a;
+}
+
+header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 8px 100px;
+    background-color: #11141a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.logo span1{
+    color: #0a5cff;
+}
+.logo span2{
+    color: rgb(116, 14, 116);
+}
+.logo span3{
+    color: rgb(8, 180, 180);
+}
+nav a{
+    position: relative;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 35px;
+    text-decoration: none;
+    color: #fff;
+    transition: all .3s ease-in-out;
+
+
+}
+nav a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 6px;
+    transform: scale(0);
+    transition: .3s;
+
+}
+nav a:hover::after{
+    transform: scale(1);
+}
+nav a:hover,
+nav a.active{
+    content: '';
+    color: rgb(30, 72, 197);
+    
+}
+
+section{
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: #1f242d;
+}
+
+   /* -----home section design------ */
+
+.main-b{
+    width: 950px;
+    min-height: 500vh;
+    background: #1f1e1e;
+    border-radius: 20px;
+    margin-top: 55px;
+    color: #fff;
+
+}  
+.cap-lan-ban h1{
+    font-size: 65px;
+    color: #fff;
+    text-align: center;
+    
+ } 
+p{
+    
+}
+p span{
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+
+}
+.cap-lan-eng h1{
+    font-size: 65px;
+    color: #fff;
+    text-align: center;
+ }
+ .cap-lan-eng p{
+    padding: 20px;
+    color: #fff;
+ 
+ }
+
+
+ /* --------about section design---------- */
+
+
+
+ section .about-t{
+    width: 800px;
+    height: 50px;
+   
+    margin-left: -490px;
+    margin-top: -480px;
+    
+ }
+ .about-t h1{
+    position: relative;
+    font-size: 40px;
+    font-weight: 600;
+    background: #1f242d;
+    color: rgb(18, 71, 230);
+    
+    
+ }
+ 
+ .about-t p{
+    color: #fff;
+    
+    font-size: 15px;
+    font-weight: 400px;
+ }
+
+ .dev-about{
+    position: absolute;
+    width: 900px;
+    height: 100px;
+    justify-content: left;
+    align-items: left;
+    margin-top: 60px;
+    margin-left: -400px;
+    
+ }
+ .dev-about h2{
+    font-size: 50px;
+    color: #0f54df;
+
+ }
+
+ .dev-about p{
+    font-size: 15px;
+    color: #fff;
+    background-color: #1f242d;
+   
+ }
+ .dev-about .social{
+    position: absolute;
+ }
+ .social a {
+    font-size: 20px;
+    color: #fff;
+    margin: 5px;
+    transition: .3s;
+
+ }
+ .social a:hover{
+    color: #0e3d9c;
+ }
+
+
+
+  /* --------Contact Design ------ */
+
+  .contact-dev{
+    margin-top: -110px;
+    margin-left: -430px;
+  }
+
+  .contact-dev h2{
+    font-size: 50px;
+    color: rgb(14, 66, 223);
+
+
+  }
+
+.contact-dev p{
+    background: #1f242d;
+    font-size: 15px;
+    color: #fff;
+    
+
+}  
