@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+
 
 
 *{
@@ -10,71 +9,113 @@
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
 }
-body{
-  background-color: #143b8a;
+html{
+    overflow-x: hidden;
 }
 
-header{
-    position: fixed;
-    left: 0;
-    top: 0;
+body{
+    overflow-x: hidden;
+    --color1: #fff;
+    --color2: #181818;
+}
+.nav-ber{
     width: 100%;
-    padding: 8px 100px;
-    background-color: #11141a;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
-}
-.logo{
-    font-size: 25px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.logo span1{
-    color: #0a5cff;
-}
-.logo span2{
-    color: rgb(116, 14, 116);
-}
-.logo span3{
-    color: rgb(8, 180, 180);
-}
-nav a{
+    list-style: none;
     position: relative;
-    font-size: 15px;
-    font-weight: 500;
-    margin-left: 35px;
+    background-color: #181818;
+    padding: 12px 20px;
+}
+h1{
+    width: 10px;
+    color: var(--color1);
+}
+h1 span{
+    color: #FF735C;
+}
+.menu{
+    display: flex;
+}
+.menu li{
+    padding-left: 30px;
+}
+.menu li a{
+    display: inline-block;
     text-decoration: none;
-    color: #fff;
-    transition: all .3s ease-in-out;
-
-
+    color: var(--color1);
+    text-align: center;
+    transition: .15s ease-in-out;
+    position: relative;
 }
-nav a::after{
-    content: '';
+.menu li a::after{
+    content: "";
     position: absolute;
+    bottom: 0;
     left: 0;
-    bottom: -5px;
-    width: 100%;
-    height: 3px;
-    background: #fff;
-    border-radius: 6px;
-    transform: scale(0);
-    transition: .3s;
+    width: 0;
+    height: 1px;
+    background-color: var(--color1);
+    transition: 0.15s ease-in-out;
 
 }
-nav a:hover::after{
-    transform: scale(1);
+.menu li a:hover::after{
+    width: 100%;
+    color: #FF735C;
 }
-nav a:hover,
-nav a.active{
-    content: '';
-    color: rgb(30, 72, 197);
-    
+.open-menu, .close-menu{
+    position: absolute;
+    color: var(--color1);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
 }
+.open-menu{
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-menu{
+    top: 20px;
+    right: 20px;
+}
+#check{
+    display: none;
+}
+
+@media (max-width:600px) {
+    .menu{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 42px;
+        right: -100%;
+        z-index: 100;
+        background-color: #1818186b;
+        transition: all 0.2s ease-in-out;
+
+    }
+    .menu li {
+        margin-top: 40px;
+    }
+    .menu li a{
+        padding: 10px;
+    }
+    .open-menu, .close-menu{
+        display: block;
+    }
+    #check:checked ~ .menu{
+        right: 0;
+    }
+}
+
+
+  
+/* ------section design for media */
 
 section{
     min-height: 100vh;
@@ -87,39 +128,67 @@ section{
    /* -----home section design------ */
 
 .main-b{
-    width: 950px;
+    width: 1191px;
     min-height: 500vh;
-    background: #1f1e1e;
+    background-color: #11141a33;
+    backdrop-filter: blur(15px);
     border-radius: 20px;
-    margin-top: 55px;
+    margin-top: 45px;
+    padding: 20px ;
     color: #fff;
 
 }  
-.cap-lan-ban h1{
-    font-size: 65px;
-    color: #fff;
+.cap-lan-ban span{
+    font-size: 80px;
+    font-weight: 600;
+    color: #FF735C;
     text-align: center;
     
- } 
-p{
     
-}
+ } 
+
+    
+
 p span{
-    font-size: 40px;
-    color: #fff;
+    font-size: 30px;
+    color: #FF735C;
     text-align: center;
     font-weight: 600;
 
 }
-.cap-lan-eng h1{
-    font-size: 65px;
-    color: #fff;
+.cap-lan-eng span{
+    font-size: 80px;
+    color: #FF735C;
     text-align: center;
  }
  .cap-lan-eng p{
     padding: 20px;
     color: #fff;
  
+ }
+
+ @media (max-width:600px) {
+    .main-b{
+        width: 650px;
+        margin-top: 1px;
+        padding: 5px 10px;
+
+    }
+    .cap-lan-ban h1{
+        font-size: 9vw;
+        
+    }
+    .cap-lan-ban span{
+        font-size: 9vw;
+    }
+    p span{
+        text-align: center;
+        font-size: 8vw;
+    }
+    .cap-lan-eng h1{
+        font-size: 5vw;
+    }
+    
  }
 
 
@@ -140,7 +209,7 @@ p span{
     font-size: 40px;
     font-weight: 600;
     background: #1f242d;
-    color: rgb(18, 71, 230);
+    color: #FF735C;
     
     
  }
@@ -164,11 +233,12 @@ p span{
  }
  .dev-about h2{
     font-size: 50px;
-    color: #0f54df;
+    color: #FF735C;
 
  }
 
  .dev-about p{
+    margin-left: 7px;
     font-size: 15px;
     color: #fff;
     background-color: #1f242d;
@@ -178,14 +248,38 @@ p span{
     position: absolute;
  }
  .social a {
-    font-size: 20px;
+    font-size: 25px;
     color: #fff;
     margin: 5px;
     transition: .3s;
 
  }
  .social a:hover{
-    color: #0e3d9c;
+    color: #FF735C;
+ }
+ 
+ @media (max-width:600px) {
+    
+    .about-t h1{
+        margin-left: 425px;
+    }
+    .about-t p{
+        font-size: 2.9vw;
+        margin-left: 428px;
+    }
+    .dev-about h2{
+        margin-left: 425px;
+    }
+    .dev-about p{
+        font-size: 2.9vw;
+        margin-left: 428px;
+    }
+    .dev-about .social{
+        font-size: 2vw;    
+        margin-left: 428px;
+        
+    }
+    
  }
 
 
@@ -193,21 +287,43 @@ p span{
   /* --------Contact Design ------ */
 
   .contact-dev{
-    margin-top: -110px;
-    margin-left: -430px;
+    margin-top: 170px;
+    margin-left: -562px;
   }
 
   .contact-dev h2{
     font-size: 50px;
-    color: rgb(14, 66, 223);
+    margin-left: 50px;
+    color: #FF735C;
 
 
   }
-
-.contact-dev p{
-    background: #1f242d;
+  .contact-dev p{
     font-size: 15px;
     color: #fff;
-    
+    margin-left: 50px;
+    background-color: #1f242d;
+   
 
-}  
+  }
+
+  .contact-dev p span{
+    font-size: 1.5vw;
+    color: #0a5cff;
+  }
+
+  @media (max-width:600px) {
+    .contact-dev h2{
+        margin-left: 570px;
+
+    }
+    .contact-dev p{
+        font-size: 2.9vw;
+        margin-left: 575px;
+    }
+    .contact-dev p span{
+        font-size: 3.3vw;
+        color: #0a5cff;
+    }
+    
+  }
